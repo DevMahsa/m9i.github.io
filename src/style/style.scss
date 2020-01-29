@@ -1,6 +1,12 @@
 p {
     margin: 0;
 }
+a {
+    color: rgb(247, 174, 40);
+    &:hover {
+        color: rgb(163, 88, 248);
+    }
+}
 .social-media {
     display: flex;
     flex-direction: row;
@@ -19,4 +25,8 @@ p {
     }
 }
 
-
+footer {
+    color: #999999;
+    margin-top: 2em;
+    font-size: .8em;
+}
