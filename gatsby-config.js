@@ -3,10 +3,10 @@ module.exports = {
   siteMetadata: {
     title: `Mahsa Blog`,
     author: `Mahsa Golchian`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A blog by me.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `mahsa_g_`,
     },
   },
   plugins: [
@@ -17,6 +17,24 @@ module.exports = {
         name: `blog`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Bebas Neue', 'Work Sans']
+        }
+      }
+    },
+    
+      {
+        resolve: `gatsby-plugin-typography`,
+        options: {
+          pathToConfigModule: `src/utils/typography`,
+        },
+      },
+      
+      
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -74,6 +92,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
