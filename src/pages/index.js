@@ -15,7 +15,7 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
+        <Bio />{" "}
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -26,22 +26,28 @@ class BlogIndex extends React.Component {
                     marginBottom: rhythm(1 / 4),
                   }}
                 >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
+                  <Link
+                    style={{
+                      boxShadow: `none`,
+                    }}
+                    to={node.fields.slug}
+                  >
+                    {" "}
+                    {title}{" "}
+                  </Link>{" "}
+                </h3>{" "}
+                <small> {node.frontmatter.date} </small>{" "}
+              </header>{" "}
               <section>
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
-                />
-              </section>
+                />{" "}
+              </section>{" "}
             </article>
           )
-        })}
+        })}{" "}
       </Layout>
     )
   }

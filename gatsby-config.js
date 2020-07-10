@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `mahsa_g_`,
-      github: `m9i`
+      github: `m9i`,
     },
   },
   plugins: [
@@ -20,23 +20,21 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ['Bebas Neue', 'Work Sans']
-        }
-      }
-    },
-    
-      {
-        resolve: `gatsby-plugin-typography`,
-        options: {
-          pathToConfigModule: `src/utils/typography`,
+          families: ["Bebas Neue", "Work Sans"],
         },
       },
-      
-      
-    
+    },
+
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -94,7 +92,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -9,8 +9,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import { rhythm } from "../utils/typography"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faTwitter, faGithub} from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons"
 
 // library.add(faAddressBook);
 
@@ -28,7 +28,7 @@ const Bio = () => {
         siteMetadata {
           author
           social {
-            twitter,
+            twitter
             github
           }
         }
@@ -38,7 +38,6 @@ const Bio = () => {
 
   const { author, social } = data.site.siteMetadata
   return (
-
     <div>
       <div
         style={{
@@ -62,27 +61,25 @@ const Bio = () => {
         />
         <div>
           <p>
-          Written by <strong>{author}</strong> who lives and works in Tehran/Iran
-          building useful things.
+            Written by <strong>{author}</strong> who lives and works in
+            Tehran/Iran building useful things.
           </p>
           {` `}
-        <ul className="social-media">
-          <li> <a href={`https://twitter.com/${social.twitter}`}>
-          <FontAwesomeIcon icon={faTwitter}/>
-            
-        </a>
-          </li>
-          <li>
-            <a href={`https://github.com/${social.github}`}>
-            <FontAwesomeIcon icon={faGithub}/>
-
-        </a>
-          </li>
-        </ul>
+          <ul className="social-media">
+            <li>
+              {" "}
+              <a href={`https://twitter.com/${social.twitter}`}>
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
+            </li>
+            <li>
+              <a href={`https://github.com/${social.github}`}>
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      </div>
-
-
     </div>
   )
 }
