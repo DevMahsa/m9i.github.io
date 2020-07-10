@@ -1,32 +1,105 @@
 p {
-    margin: 0;
+  margin: 0;
 }
 a {
-    color: rgb(247, 174, 40);
-    &:hover {
-        color: rgb(193, 143, 250);
-    }
+  color: #ffa7c4;
+  &:hover {
+    color: rgb(255, 93, 201);
+  }
 }
 .social-media {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
 
-    li {
-        list-style: none;
-        padding: 0 .25em;
+  li {
+    list-style: none;
+    padding: 0 0.25em;
 
-        a {
-            &:hover {
-                text-decoration: none;
-            }
-        }
+    a {
+      &:hover {
+        text-decoration: none;
+      }
     }
+  }
 }
 
 footer {
-    color: #999999;
-    margin-top: 2em;
-    font-size: .8em;
+  color: #999999;
+  margin-top: 2em;
+  font-size: 0.8em;
+}
+
+.gatsby-highlight-code-line {
+  background-color: #feb;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
+}
+
+/**
+ * If you already use line highlighting
+ */
+
+/* Adjust the position of the line numbers */
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding-left: 2.8em;
+}
+
+.gatsby-highlight {
+  background-color: #fdf6e3;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
+}
+.command-line-prompt > span:before {
+  color: #999;
+  content: " ";
+  display: block;
+  padding-right: 0.8em;
+}
+
+/* Prompt for all users */
+.command-line-prompt > span[data-user]:before {
+  content: "[" attr(data-user) "@" attr(data-host) "] $";
+}
+
+/* Prompt for root */
+.command-line-prompt > span[data-user="root"]:before {
+  content: "[" attr(data-user) "@" attr(data-host) "] #";
+}
+
+.command-line-prompt > span[data-prompt]:before {
+  content: attr(data-prompt);
+}
+
+body {
+  --bg: white;
+  --textNormal: #222;
+  --textTitle: #222;
+  --textLink: blue;
+  --hr: hsla(0, 0%, 0%, 0.2);
+
+  background-color: var(--bg);
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+
+  --bg: rgb(42, 44, 44);
+  --textNormal: rgba(255, 255, 255, 0.88);
+  --textTitle: white;
+  --textLink: yellow;
+  --hr: hsla(0, 0%, 100%, 0.2);
 }
