@@ -53,7 +53,7 @@ const Bio = () => {
         <div>
           <p>
             Written by <strong>{author}</strong> who lives and works in
-            Tehran/Iran building useful things.
+            Vancouver/Canada building useful things.
           </p>
           {` `}
           <ul className="social-media">
