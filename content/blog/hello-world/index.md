@@ -15,4 +15,4 @@ Oh, and here's a great quote from this national geographic on
 
 > Though often called the koala “bear,” this cuddly animal is not a bear at all; it is a marsupial, or pouched mammal. After giving birth, a female koala carries her baby in her pouch for about six months. When the infant emerges, it rides on its mother's back or clings to her belly, accompanying her everywhere until it is about a year old.
 
-![koala](./koala.jpg)
+![koala](content/blog/hello-world/koala.jpg)
